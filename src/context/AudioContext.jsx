@@ -2,7 +2,8 @@ import {createContext, useState} from "react";
 import tracksList from '../assets/tracksList.js'
 
 
-const audio = new Audio()
+const defaultTrack = tracksList[0];
+const audio = new Audio(defaultTrack.src)
 export const AudioContext = createContext({})
 
 export const AudioProvider = ({children}) => {
