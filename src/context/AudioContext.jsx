@@ -30,7 +30,7 @@ export const AudioProvider = ({children}) => {
         }
     }
 
-    const value = {current, isPlaying, toggleAutoHandler}
+    const value = {audio, current, isPlaying, toggleAutoHandler}
 
     return <AudioContext.Provider value={value}>{children}</AudioContext.Provider>
 
