@@ -1,10 +1,13 @@
 import {IconButton} from '@mui/material'
 import {PlayArrow} from '@mui/icons-material'
+import secondsToMMSS from "../../pages/main-page/secondsToMMSS.js";
 
 import s from './track.module.scss'
 
 export const Track = (track) => {
     const {id, src, preview, title, artists, duration} = track
+
+    const formattedDuration = secondsToMMSS(duration)
 
     return (
         <div className={s.track}>
@@ -16,7 +19,7 @@ export const Track = (track) => {
                 <b>{title}</b>
                 <b>{artists}</b>
             </div>
-            <p>{duration}</p>
+            <p>{formattedDuration}</p>
         </div>
     )
 };
